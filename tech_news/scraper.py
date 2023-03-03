@@ -1,5 +1,4 @@
 import time
-from typing import List
 import requests
 from parsel import Selector
 from requests.exceptions import ReadTimeout
@@ -21,9 +20,6 @@ def fetch(url):
 
 # Requisito 2
 def scrape_updates(html_content):
-    if not html_content:
-        return []
-
     return Selector(text=html_content).css("h2 > a::attr(href)").getall()
 
 
