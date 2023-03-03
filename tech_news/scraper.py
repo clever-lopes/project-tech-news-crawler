@@ -20,7 +20,7 @@ def fetch(url):
 
 # Requisito 2
 def scrape_updates(html_content):
-    selector = Selector(text=html_content.text)
+    """ selector = Selector(text=html_content.text) """
 
 
 # Requisito 3
