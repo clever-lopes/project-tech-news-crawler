@@ -1,26 +1,26 @@
 import time
 import requests
-# from parsel import Selector
-from requests.exceptions import ConnectTimeout,  HTTPError, ReadTimeout
-
+from parsel import Selector
+from requests.exceptions import ReadTimeout
 
 
 # Requisito 1
 def fetch(url):
     try:
-        res = requests.get(url, headers={"user-agent":"Fake user-agent"})
+        res = requests.get(url, headers={"user-agent": "Fake user-agent"})
         time.sleep(1)
     except ReadTimeout:
         return None
-    
+
     if res.status_code != 200:
         return None
 
     return res.text
 
+
 # Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(text=html_content.text)
 
 
 # Requisito 3
