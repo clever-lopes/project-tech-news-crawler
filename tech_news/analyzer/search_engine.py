@@ -1,5 +1,5 @@
 import datetime
-from tech_news.database import search_news, db
+from tech_news.database import search_news
 
 
 # Requisito 7
