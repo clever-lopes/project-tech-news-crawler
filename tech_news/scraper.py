@@ -64,4 +64,4 @@ def get_tech_news(amount):
 
     new_list = [scrape_news(fetch(url)) for url in news_urls[:amount]]
     create_news(new_list)
-    return new_list 
+    return new_list
